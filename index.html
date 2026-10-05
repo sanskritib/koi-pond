@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>koi pond</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #1f2a1e; font-family: ui-sans-serif, system-ui, sans-serif; }
+      #scene { display: block; width: 100vw; height: 100vh; touch-action: none; }
+      #hint {
+        position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%);
+        color: #f3efe6; font-size: 13px; letter-spacing: 0.04em;
+        background: rgba(20, 30, 24, 0.45); padding: 8px 14px; border-radius: 999px;
+        backdrop-filter: blur(6px); transition: opacity 1.2s ease; pointer-events: none;
+      }
+      #hint.hide { opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <div id="hint">tap the water - drag to look around</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
